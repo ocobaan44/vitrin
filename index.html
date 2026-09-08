@@ -65,6 +65,57 @@ h1{font:700 clamp(28px,4.5vw,42px)/1 "Barlow Condensed",sans-serif;color:var(--i
 
 .kart{background:var(--yuzey);border:1px solid var(--cizgi);display:flex;flex-direction:column}
 [hidden]{display:none!important}
+
+/* --- Ek bolumler: site hareketleri + tum bayiler --- */
+.ek{margin-top:52px;padding-top:26px;border-top:2px solid var(--cizgi)}
+.ek h2{font:700 26px/1.15 "Barlow Condensed",Barlow,sans-serif;margin:0 0 4px;
+  display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+.ek .adet{font:500 12.5px/1 Barlow;color:var(--sessiz);letter-spacing:.03em}
+.ek .ac{margin:0 0 16px;color:var(--sessiz);font-size:14px;max-width:70ch}
+.sliste{display:grid;gap:9px}
+.shar{background:var(--yuzey);border:1px solid var(--cizgi);border-left:4px solid var(--cizgi);
+  padding:12px 15px}
+.sbas{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:6px}
+.sbas b{font-size:14.5px}
+.sbas .sehir{color:var(--sessiz);font-size:12.5px}
+.sbas time{margin-left:auto;color:var(--sessiz);font-size:12.5px;
+  font-variant-numeric:tabular-nums}
+.smetin{margin:0 0 7px;font-size:14px;line-height:1.5}
+.smetin .yeni{color:var(--yesil,#1e7d44);font-weight:600;margin-right:4px}
+.smetin .kalkan{color:var(--sessiz);text-decoration:line-through}
+.slink{font-size:12.5px;word-break:break-all}
+.bt{width:100%;border-collapse:collapse;background:var(--yuzey);
+  border:1px solid var(--cizgi);font-size:14px}
+.bt th{text-align:left;font:600 11px/1 Barlow;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--sessiz);padding:9px 12px;border-bottom:1px solid var(--cizgi);white-space:nowrap}
+.bt td{padding:9px 12px;border-bottom:1px solid var(--cizgi);vertical-align:middle}
+.bt tr:last-child td{border-bottom:0}
+.bt .sayi{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bt .bizsat{background:rgba(28,105,212,.09)}
+.bt .bizsat td:first-child{font-weight:600}
+.nokta{display:inline-block;width:9px;height:9px;border-radius:50%;flex:0 0 9px}
+.dm{display:inline-block;font:600 10.5px/1 Barlow;letter-spacing:.04em;padding:4px 7px;
+  white-space:nowrap}
+.dm.aktif{background:rgba(30,125,68,.14);color:#1e7d44}
+.dm.sessiz{background:rgba(120,130,145,.16);color:var(--sessiz)}
+.dm.site{background:rgba(168,100,0,.14);color:#a86400}
+.dm.hata{background:rgba(192,57,43,.14);color:#c0392b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dm.aktif{color:#5ed08c}
+  :root:not([data-theme="light"]) .dm.site{color:#e0a244}
+  :root:not([data-theme="light"]) .dm.hata{color:#ff7b6b}
+  :root:not([data-theme="light"]) .smetin .yeni{color:#5ed08c}}
+:root[data-theme="dark"] .dm.aktif{color:#5ed08c}
+:root[data-theme="dark"] .dm.site{color:#e0a244}
+:root[data-theme="dark"] .dm.hata{color:#ff7b6b}
+:root[data-theme="dark"] .smetin .yeni{color:#5ed08c}
+@media (max-width:640px){
+  .bt,.bt tbody,.bt tr,.bt td{display:block;width:100%}
+  .bt thead{display:none}
+  .bt td{border-bottom:0;padding:4px 12px}
+  .bt tr{border-bottom:1px solid var(--cizgi);padding:8px 0}
+  .bt td:first-child{font-weight:600;padding-top:10px}
+  .bt .sayi{text-align:left}
+}
 .kart.kampanya{border-color:var(--kirmizi);border-width:1px 1px 1px 3px}
 .gorsel{display:block;position:relative;line-height:0;background:var(--yuzey-2);aspect-ratio:1;overflow:hidden}
 .gorsel img{width:100%;height:100%;object-fit:cover;display:block}
@@ -106,7 +157,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--cizgi);
     <h1>BMW Bayi Vitrini</h1>
     <p class="alt">Yetkili servis ağındaki bayilerin Instagram'da ne paylaştığı — son 30 gün.</p>
   </div>
-  <p class="guncel">Güncelleme<br><b>8 Eylül 22:15</b></p>
+  <p class="guncel">Güncelleme<br><b>8 Eylül 23:11</b></p>
 </div></header>
 
 <div class="kpi">
@@ -117,7 +168,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--cizgi);
 </div>
 
 <div class="arac">
-  <select id="f-bayi"><option value="">Tüm bayiler</option><option value="inciroglu">İnciroğlu</option><option value="ucler">Üçler Otomotiv</option><option value="borusanoto">Borusan Oto</option><option value="otomol">Otomol</option><option value="kosifleroto">Kosifler Oto</option><option value="kosifler_antalya">Kosifler Antalya</option><option value="kosifler_samsun">Kosifler Samsun</option><option value="teknikoto">Teknik Oto</option><option value="ozgorkey">Özgörkey</option><option value="oztorun">Öztorun Oto</option><option value="kopruluoto">Köprülü Oto</option><option value="trendoto">Trend Oto</option><option value="sandikci">Sandıkçı Oto</option><option value="erenler">Erenler Otomotiv</option><option value="musluoglu">Musluoğlu</option><option value="burmot">Burmot</option><option value="bmwturkiye">BMW Türkiye</option></select>
+  <select id="f-bayi"><option value="">Tüm bayiler</option><option value="inciroglu">İnciroğlu</option><option value="ucler">Üçler Otomotiv</option><option value="borusanoto">Borusan Oto</option><option value="otomol">Otomol</option><option value="kosifleroto">Kosifler Oto</option><option value="kosifler_antalya">Kosifler Antalya</option><option value="kosifler_samsun">Kosifler Samsun</option><option value="teknikoto">Teknik Oto</option><option value="ozgorkey">Özgörkey</option><option value="oztorun">Öztorun Oto</option><option value="kopruluoto">Köprülü Oto</option><option value="trendoto">Trend Oto</option><option value="sandikci">Sandıkçı Oto</option><option value="erenler">Erenler Otomotiv</option><option value="badilli">Badıllı Oto · sessiz</option><option value="akcinler">Akçinler · sessiz</option><option value="musluoglu">Musluoğlu</option><option value="istanbuloto">İstanbul Oto · sessiz</option><option value="burmot">Burmot</option><option value="piyalepasa">Piyalepaşa · sessiz</option><option value="ozguroto">Özgür Oto · sessiz</option><option value="auotomotiv">AU Otomotiv · sessiz</option><option value="bmwturkiye">BMW Türkiye</option><option value="mepa">Mepa Otomotiv · sessiz</option><option value="erguleryuz">ER-Güleryüz · sessiz</option><option value="egeservis">Ege Servis · sessiz</option><option value="beyhanoto">Beyhan Oto · sessiz</option><option value="dinamikoto">Dinamik Oto · sessiz</option></select>
   <input id="f-ara" type="search" placeholder="metinde ara — faiz, X1, bakım…">
   <button class="dg" id="f-kampanya" type="button">Yalnız kampanyalar</button>
   <button class="dg" id="f-video" type="button">Yalnız videolar</button>
@@ -6506,6 +6557,279 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--cizgi);
       </article></div></section>
 <div class="bos" id="bos" hidden>Bu filtreye uyan paylaşım yok.</div>
 
+
+<section class="ek" id="site-bolum">
+  <h2>Site hareketleri <span class="adet">0 kayıt · son 30 gün</span></h2>
+  <p class="ac">Bayilerin kendi web sitelerinde açılan ve kaldırılan kampanya sayfaları.
+  Sitede görsel yoktur, yalnız başlık vardır. Instagram hesabı olmayan servisler
+  sisteme <b>yalnızca buradan</b> yansır.</p>
+  <div class="sliste"><div class="bos">Bu aralıkta site değişikliği yok.</div></div>
+</section>
+
+<section class="ek" id="bayi-bolum">
+  <h2>Tüm bayiler <span class="adet">28 hesap · 5 sessiz · 6 yalnız site</span></h2>
+  <p class="ac">Yetkili servis ağının tamamı. Bu aralıkta paylaşım yapmayan bayiler de
+  listede — sessizlik de rekabet bilgisidir. Okunamayan hesap sıfır olarak değil,
+  <b>okunamadı</b> olarak gösterilir.</p>
+  <table class="bt">
+    <thead><tr><th>Bayi</th><th>Şehir</th><th>Durum</th><th class="sayi">Paylaşım</th>
+      <th>Son paylaşım</th><th class="sayi">Takipçi</th></tr></thead>
+    <tbody>
+      <tr class="bsat bizsat" data-hesap="inciroglu">
+        <td><span class="nokta" style="background:#1c69d4"></span>
+            İnciroğlu</td>
+        <td class="sehir">Kayseri</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">13</td>
+        <td>8 Eylül</td>
+        <td class="sayi">3.801</td>
+      </tr>
+      <tr class="bsat" data-hesap="ucler">
+        <td><span class="nokta" style="background:#d40000"></span>
+            Üçler Otomotiv</td>
+        <td class="sehir">Kayseri</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">2</td>
+        <td>8 Eylül</td>
+        <td class="sayi">1.621</td>
+      </tr>
+      <tr class="bsat" data-hesap="borusanoto">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Borusan Oto</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>8 Eylül</td>
+        <td class="sayi">153.424</td>
+      </tr>
+      <tr class="bsat" data-hesap="otomol">
+        <td><span class="nokta" style="background:#6b7280"></span>
+            Otomol</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">21</td>
+        <td>8 Eylül</td>
+        <td class="sayi">25.996</td>
+      </tr>
+      <tr class="bsat" data-hesap="kosifleroto">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Kosifler Oto</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>8 Eylül</td>
+        <td class="sayi">37.489</td>
+      </tr>
+      <tr class="bsat" data-hesap="kosifler_antalya">
+        <td><span class="nokta" style="background:#0080c8"></span>
+            Kosifler Antalya</td>
+        <td class="sehir">Antalya</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>8 Eylül</td>
+        <td class="sayi">10.118</td>
+      </tr>
+      <tr class="bsat" data-hesap="kosifler_samsun">
+        <td><span class="nokta" style="background:#0080c8"></span>
+            Kosifler Samsun</td>
+        <td class="sehir">Samsun</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>8 Eylül</td>
+        <td class="sayi">6.687</td>
+      </tr>
+      <tr class="bsat" data-hesap="teknikoto">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Teknik Oto</td>
+        <td class="sehir">Bursa</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>8 Eylül</td>
+        <td class="sayi">24.959</td>
+      </tr>
+      <tr class="bsat" data-hesap="ozgorkey">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Özgörkey</td>
+        <td class="sehir">İzmir</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>8 Eylül</td>
+        <td class="sayi">22.112</td>
+      </tr>
+      <tr class="bsat" data-hesap="oztorun">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Öztorun Oto</td>
+        <td class="sehir">Kocaeli</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">21</td>
+        <td>7 Eylül <span class="sehir">(1 gün önce)</span></td>
+        <td class="sayi">36.677</td>
+      </tr>
+      <tr class="bsat" data-hesap="kopruluoto">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Köprülü Oto</td>
+        <td class="sehir">Konya</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">26</td>
+        <td>8 Eylül</td>
+        <td class="sayi">9.345</td>
+      </tr>
+      <tr class="bsat" data-hesap="trendoto">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Trend Oto</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">2</td>
+        <td>30 Ağustos <span class="sehir">(9 gün önce)</span></td>
+        <td class="sayi">5.294</td>
+      </tr>
+      <tr class="bsat" data-hesap="sandikci">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Sandıkçı Oto</td>
+        <td class="sehir">Sakarya</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">1</td>
+        <td>21 Ağustos <span class="sehir">(18 gün önce)</span></td>
+        <td class="sayi">3.723</td>
+      </tr>
+      <tr class="bsat" data-hesap="erenler">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Erenler Otomotiv</td>
+        <td class="sehir">Gaziantep</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">13</td>
+        <td>7 Eylül <span class="sehir">(1 gün önce)</span></td>
+        <td class="sayi">3.007</td>
+      </tr>
+      <tr class="bsat" data-hesap="badilli">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Badıllı Oto</td>
+        <td class="sehir">Şanlıurfa</td>
+        <td><span class="dm sessiz">sessiz</span></td>
+        <td class="sayi">—</td>
+        <td>kayıt yok</td>
+        <td class="sayi">7.474</td>
+      </tr>
+      <tr class="bsat" data-hesap="akcinler">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Akçinler</td>
+        <td class="sehir">Manisa</td>
+        <td><span class="dm sessiz">sessiz</span></td>
+        <td class="sayi">—</td>
+        <td>kayıt yok</td>
+        <td class="sayi">2.037</td>
+      </tr>
+      <tr class="bsat" data-hesap="musluoglu">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Musluoğlu</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">1</td>
+        <td>21 Ağustos <span class="sehir">(18 gün önce)</span></td>
+        <td class="sayi">1.147</td>
+      </tr>
+      <tr class="bsat" data-hesap="istanbuloto">
+        <td><span class="nokta" style="background:#9ca3af"></span>
+            İstanbul Oto</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm hata">okunamadı</span></td>
+        <td class="sayi">—</td>
+        <td>—</td>
+        <td class="sayi">—</td>
+      </tr>
+      <tr class="bsat" data-hesap="burmot">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Burmot</td>
+        <td class="sehir">Bursa</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">1</td>
+        <td>25 Ağustos <span class="sehir">(14 gün önce)</span></td>
+        <td class="sayi">1.070</td>
+      </tr>
+      <tr class="bsat" data-hesap="piyalepasa">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Piyalepaşa</td>
+        <td class="sehir">İstanbul</td>
+        <td><span class="dm sessiz">sessiz</span></td>
+        <td class="sayi">—</td>
+        <td>kayıt yok</td>
+        <td class="sayi">892</td>
+      </tr>
+      <tr class="bsat" data-hesap="ozguroto">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            Özgür Oto</td>
+        <td class="sehir">Denizli</td>
+        <td><span class="dm sessiz">sessiz</span></td>
+        <td class="sayi">—</td>
+        <td>kayıt yok</td>
+        <td class="sayi">787</td>
+      </tr>
+      <tr class="bsat" data-hesap="auotomotiv">
+        <td><span class="nokta" style="background:#0066b1"></span>
+            AU Otomotiv</td>
+        <td class="sehir">Ankara</td>
+        <td><span class="dm sessiz">sessiz</span></td>
+        <td class="sayi">—</td>
+        <td>kayıt yok</td>
+        <td class="sayi">279</td>
+      </tr>
+      <tr class="bsat" data-hesap="bmwturkiye">
+        <td><span class="nokta" style="background:#111827"></span>
+            BMW Türkiye</td>
+        <td class="sehir">—</td>
+        <td><span class="dm aktif">aktif</span></td>
+        <td class="sayi">25</td>
+        <td>7 Eylül <span class="sehir">(1 gün önce)</span></td>
+        <td class="sayi">751.333</td>
+      </tr>
+      <tr class="bsat" data-hesap="mepa">
+        <td><span class="nokta" style="background:#9ca3af"></span>
+            Mepa Otomotiv</td>
+        <td class="sehir">Diyarbakır</td>
+        <td><span class="dm site">yalnız site</span></td>
+        <td class="sayi">—</td>
+        <td>—</td>
+        <td class="sayi">—</td>
+      </tr>
+      <tr class="bsat" data-hesap="erguleryuz">
+        <td><span class="nokta" style="background:#9ca3af"></span>
+            ER-Güleryüz</td>
+        <td class="sehir">Erzurum</td>
+        <td><span class="dm site">yalnız site</span></td>
+        <td class="sayi">—</td>
+        <td>—</td>
+        <td class="sayi">—</td>
+      </tr>
+      <tr class="bsat" data-hesap="egeservis">
+        <td><span class="nokta" style="background:#9ca3af"></span>
+            Ege Servis</td>
+        <td class="sehir">İzmir</td>
+        <td><span class="dm site">yalnız site</span></td>
+        <td class="sayi">—</td>
+        <td>—</td>
+        <td class="sayi">—</td>
+      </tr>
+      <tr class="bsat" data-hesap="beyhanoto">
+        <td><span class="nokta" style="background:#9ca3af"></span>
+            Beyhan Oto</td>
+        <td class="sehir">Muğla</td>
+        <td><span class="dm site">yalnız site</span></td>
+        <td class="sayi">—</td>
+        <td>—</td>
+        <td class="sayi">—</td>
+      </tr>
+      <tr class="bsat" data-hesap="dinamikoto">
+        <td><span class="nokta" style="background:#9ca3af"></span>
+            Dinamik Oto</td>
+        <td class="sehir">Trabzon</td>
+        <td><span class="dm site">yalnız site</span></td>
+        <td class="sayi">—</td>
+        <td>—</td>
+        <td class="sayi">—</td>
+      </tr></tbody>
+  </table>
+</section>
+
 <footer>
 Kaynak: Meta Instagram Graph API — yalnızca herkese açık işletme hesapları. Yorum metni ve
 kullanıcı bilgisi toplanmaz.<br>
@@ -6550,6 +6874,22 @@ tazeler, çok eski kartlarda yine de boş çıkabilir.
     bulunan.textContent = n + " paylaşım gösteriliyor";
     bos.hidden = n > 0;
   }
+  // Ek bolumler de bayi secimini izler: bir bayi secilince site hareketleri ve
+  // bayi tablosu da o bayiye daralir.
+  var ekler = Array.prototype.slice.call(document.querySelectorAll(".shar,.bsat"));
+  function ekSuz() {
+    var bayi = fBayi.value, ara = kucult(fAra.value.trim());
+    ekler.forEach(function (e) {
+      var ok = true;
+      if (bayi && e.dataset.hesap !== bayi) ok = false;
+      if (ok && ara && e.classList.contains("shar")
+          && kucult(e.textContent).indexOf(ara) === -1) ok = false;
+      e.hidden = !ok;
+    });
+  }
+  var asilSuz = suz;
+  suz = function () { asilSuz(); ekSuz(); };
+
   fBayi.addEventListener("change", suz);
   fAra.addEventListener("input", suz);
   bK.addEventListener("click", function () { yK = !yK; bK.classList.toggle("acik", yK); suz(); });
